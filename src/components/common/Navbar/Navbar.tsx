@@ -20,8 +20,6 @@ const Navbar = () => {
       <h2 className="font-bold">{currentPath}</h2>
     );
 
-  console.log("current path", currentPath);
-
   return (
     <header className="fixed top-0 left-0 right-0 z-10 flex w-full justify-between border-b-[1px] bg-white/80 py-2.5 px-4 backdrop-blur-md dark:bg-black/80">
       <nav className="flex w-full flex-row items-center justify-between gap-5">
