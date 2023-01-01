@@ -51,7 +51,7 @@ const BottomNavbar = () => {
   ));
 
   return (
-    <nav className="sticky bottom-0 flex w-full justify-between border-t-[1px] bg-white lg:hidden">
+    <nav className="fixed bottom-0 flex w-full justify-between border-t-[1px] bg-white lg:hidden">
       {bottomItems}
     </nav>
   );
