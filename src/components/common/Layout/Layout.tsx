@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { BottomNavbar, Navabr } from "..";
+import { BottomNavbar, Navabr, Sidebar } from "..";
 
 type LayoutProps = {
   children: ReactNode;
@@ -9,11 +9,13 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
     <div className="flex flex-row">
-      <aside className="sticky top-0 hidden h-screen sm:block">Aside</aside>
-      <div className="flex flex-col justify-between">
+      <Sidebar />
+      <div className="w-full">
         <Navabr />
-        <main>{children}</main>
-        <BottomNavbar />
+        <div className="flex w-full flex-col justify-between">
+          <main className="mb-12 lg:mb-0">{children}</main>
+          <BottomNavbar />
+        </div>
       </div>
     </div>
   );
