@@ -51,11 +51,9 @@ const BottomNavbar = () => {
   ));
 
   return (
-    <div className="tems-center flex justify-center">
-      <nav className="fixed bottom-0 flex w-full max-w-xl justify-between border-t-[1px] bg-white lg:hidden">
-        {bottomItems}
-      </nav>
-    </div>
+    <nav className="sticky bottom-0 flex w-full justify-between border-t-[1px] bg-white sm:hidden">
+      {bottomItems}
+    </nav>
   );
 };
 
