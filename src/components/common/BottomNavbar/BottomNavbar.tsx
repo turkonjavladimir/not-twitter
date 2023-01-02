@@ -54,9 +54,11 @@ const BottomNavbar = () => {
   ));
 
   return (
-    <nav className="fixed bottom-0 flex w-full justify-between border-t-[1px] bg-white lg:hidden">
-      {bottomItems}
-    </nav>
+    <div className="fixed bottom-0 flex w-full justify-center border-t-[1px] bg-white">
+      <nav className="flex w-full max-w-xl justify-between lg:hidden">
+        {bottomItems}
+      </nav>
+    </div>
   );
 };
 
