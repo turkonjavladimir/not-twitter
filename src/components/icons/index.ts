@@ -1,9 +1,0 @@
-export { default as HomeSolid } from "./HomeSolid";
-export { default as HomeOutlined } from "./HomeOutlined";
-export { default as BellSolid } from "./BellSolid";
-export { default as BellOutlined } from "./BellOutlined";
-export { default as EnvelopeSolid } from "./EnvelopeSolid";
-export { default as EnvelopeOutlined } from "./EnvelopeOutlined";
-export { default as MagnifyingGlassOutlined } from "./MagnifyingGlassOutlined";
-export { default as UserOutlined } from "./UserOutlined";
-export { default as GearOutlined } from "./GearOutlined";

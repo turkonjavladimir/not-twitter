@@ -2,37 +2,40 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import {
-  BellOutlined,
-  BellSolid,
-  EnvelopeOutlined,
-  EnvelopeSolid,
-  HomeOutlined,
-  HomeSolid,
-  MagnifyingGlassOutlined,
-} from "../../icons";
+  HomeIcon,
+  MagnifyingGlassIcon,
+  BellIcon,
+  EnvelopeIcon,
+} from "@heroicons/react/24/outline";
+
+import {
+  HomeIcon as HomeIconSolid,
+  BellIcon as BellIconSolid,
+  EnvelopeIcon as EnvelopeIconSolid,
+} from "@heroicons/react/24/solid";
 
 /**
  * @TODO: revisit icons
  */
 const bottonNavLinks = [
   {
-    icon: <HomeOutlined />,
-    activeIcon: <HomeSolid />,
+    icon: <HomeIcon className="h-6 w-6" />,
+    activeIcon: <HomeIconSolid className="h-6 w-6" />,
     href: "/",
   },
   {
-    icon: <MagnifyingGlassOutlined className="h-6 w-6" />,
-    activeIcon: <MagnifyingGlassOutlined className="h-6 w-6" />,
+    icon: <MagnifyingGlassIcon className="h-6 w-6" />,
+    activeIcon: <MagnifyingGlassIcon className="h-6 w-6" />,
     href: "/search",
   },
   {
-    icon: <BellOutlined />,
-    activeIcon: <BellSolid />,
+    icon: <BellIcon className="h-6 w-6" />,
+    activeIcon: <BellIconSolid className="h-6 w-6" />,
     href: "/notifications",
   },
   {
-    icon: <EnvelopeOutlined />,
-    activeIcon: <EnvelopeSolid />,
+    icon: <EnvelopeIcon className="h-6 w-6" />,
+    activeIcon: <EnvelopeIconSolid className="h-6 w-6" />,
     href: "/messages",
   },
 ];

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
-import { UserOutlined } from "../../icons";
+import { UserIcon } from "@heroicons/react/24/outline";
 
 type AvatarSize = "sm" | "md" | "lg";
 const sizes = {
@@ -33,7 +32,7 @@ const Avatar = ({
       className={`${sizeClasses} border-primary hover:border-secondary focus:border-secondary flex items-center justify-center rounded-full border-2 transition-colors ease-linear hover:cursor-pointer`}
     >
       {!imageUrl ? (
-        <UserOutlined className="h-6 w-6" />
+        <UserIcon className="h-6 w-6" />
       ) : (
         <Image
           className="w-12 rounded-full object-cover"
