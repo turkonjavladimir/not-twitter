@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { UserIcon } from "@heroicons/react/24/outline";
 
 type AvatarSize = "sm" | "md" | "lg";
 const sizes = {
@@ -10,29 +9,44 @@ const sizes = {
 };
 
 type AvatarProps = {
+  name?: string;
+  href?: string;
   size?: AvatarSize;
   imageUrl?: string;
   onClick?: (
     e: React.MouseEvent<HTMLElement> | React.TouchEvent<HTMLElement>
   ) => void;
-  href?: string;
+};
+
+const getInitials = (name: string) => {
+  name = name.trim();
+
+  if (name.length <= 3) return name;
+
+  return name
+    ?.split(/\s+/)
+    .map((w) => [...w][0])
+    .slice(0, 3)
+    .join("");
 };
 
 const Avatar = ({
   onClick,
+  name = "",
   href = "",
   size = "sm",
   imageUrl = "",
 }: AvatarProps) => {
   const sizeClasses = size === "sm" ? "w-8 h-8" : sizes[size];
+
   return (
     <Link
       href={href}
       onClick={onClick}
-      className={`${sizeClasses} border-primary hover:border-secondary focus:border-secondary flex items-center justify-center rounded-full border-2 transition-colors ease-linear hover:cursor-pointer`}
+      className={`${sizeClasses} flex items-center justify-center rounded-full border-2 border-neutral-100 bg-gradient-to-tl from-slate-400 transition-colors ease-linear hover:cursor-pointer`}
     >
       {!imageUrl ? (
-        <UserIcon className="h-6 w-6" />
+        getInitials(name)
       ) : (
         <Image
           className="w-12 rounded-full object-cover"
