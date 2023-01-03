@@ -39,7 +39,7 @@ const BottomNavbar = () => {
       href={item?.url}
     >
       <span
-        className={`rounded-xl py-2 px-6 ${
+        className={`rounded-full p-2 ${
           router?.asPath === item?.url ? "bg-gray-100" : ""
         }`}
       >
