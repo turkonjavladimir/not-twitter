@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 
 type AvatarSize = "sm" | "md" | "lg";
@@ -9,44 +8,32 @@ const sizes = {
 };
 
 type AvatarProps = {
-  name?: string;
-  href?: string;
+  label?: string;
   size?: AvatarSize;
   imageUrl?: string;
-  onClick?: (
-    e: React.MouseEvent<HTMLElement> | React.TouchEvent<HTMLElement>
-  ) => void;
 };
 
-const getInitials = (name: string) => {
-  name = name.trim();
+const getInitials = (label: string) => {
+  label = label.trim();
 
-  if (name.length <= 3) return name;
+  if (label.length <= 3) return label;
 
-  return name
+  return label
     ?.split(/\s+/)
     .map((w) => [...w][0])
     .slice(0, 3)
     .join("");
 };
 
-const Avatar = ({
-  onClick,
-  name = "",
-  href = "",
-  size = "sm",
-  imageUrl = "",
-}: AvatarProps) => {
+const Avatar = ({ label = "", size = "sm", imageUrl = "" }: AvatarProps) => {
   const sizeClasses = size === "sm" ? "w-8 h-8" : sizes[size];
 
   return (
-    <Link
-      href={href}
-      onClick={onClick}
+    <span
       className={`${sizeClasses} flex items-center justify-center rounded-full border-2 border-neutral-100 bg-gradient-to-tl from-slate-300 text-xs transition-colors ease-linear hover:cursor-pointer md:text-sm`}
     >
       {!imageUrl ? (
-        getInitials(name)
+        getInitials(label)
       ) : (
         <Image
           className="w-12 rounded-full object-cover"
@@ -56,7 +43,7 @@ const Avatar = ({
           src={imageUrl}
         />
       )}
-    </Link>
+    </span>
   );
 };
 
