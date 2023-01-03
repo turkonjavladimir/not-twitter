@@ -6,6 +6,7 @@ import {
   BellIcon,
   EnvelopeIcon,
 } from "@heroicons/react/24/outline";
+import { useRouter } from "next/router";
 
 /**
  * @TODO: revisit icons | add active state
@@ -13,37 +14,44 @@ import {
 const bottonNavLinks = [
   {
     icon: <HomeIcon className="h-6 w-6" />,
-    href: "/",
+    url: "/",
   },
   {
     icon: <MagnifyingGlassIcon className="h-6 w-6" />,
-    href: "/search",
+    url: "/search",
   },
   {
     icon: <BellIcon className="h-6 w-6" />,
-    href: "/notifications",
+    url: "/notifications",
   },
   {
     icon: <EnvelopeIcon className="h-6 w-6" />,
-    href: "/messages",
+    url: "/messages",
   },
 ];
 
 const BottomNavbar = () => {
-  const bottomItems = bottonNavLinks?.map((item) => (
+  const router = useRouter();
+  const navItems = bottonNavLinks?.map((item) => (
     <Link
-      key={item?.href}
-      className="stroke flex w-full items-center justify-center py-3 text-sm"
-      href={item?.href}
+      key={item?.url}
+      className={`flex w-full items-center justify-center rounded-lg py-1 text-sm`}
+      href={item?.url}
     >
-      {item?.icon}
+      <span
+        className={`rounded-xl py-2 px-6 ${
+          router?.asPath === item?.url ? "bg-gray-100" : ""
+        }`}
+      >
+        {item?.icon}
+      </span>
     </Link>
   ));
 
   return (
     <div className="fixed bottom-0 flex w-full justify-center border-t-[1px] bg-white">
-      <nav className="flex w-full max-w-xl justify-between lg:hidden">
-        {bottomItems}
+      <nav className="flex w-full max-w-xl justify-between md:hidden">
+        {navItems}
       </nav>
     </div>
   );
