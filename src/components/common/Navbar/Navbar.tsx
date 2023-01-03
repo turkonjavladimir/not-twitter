@@ -1,5 +1,5 @@
-import { Cog8ToothIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
+import { Cog8ToothIcon } from "@heroicons/react/24/outline";
 
 import { Avatar } from "../Avatar";
 import Searchbar from "../Searchbar";
@@ -16,7 +16,11 @@ const Navbar = () => {
     router?.pathname === "/" ? (
       <h2 className="font-bold">Home</h2>
     ) : (
-      <h2 className="font-bold">{currentPath}</h2>
+      <h2 className="font-bold">
+        {currentPath.split("/")[0] === "Profile"
+          ? router?.query?.slug
+          : currentPath.split("/")[0]}
+      </h2>
     );
 
   return (
