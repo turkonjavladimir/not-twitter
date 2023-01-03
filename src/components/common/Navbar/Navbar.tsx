@@ -28,10 +28,7 @@ const Navbar = () => {
       <nav className="flex w-full flex-row items-center justify-between gap-5">
         <div className="flex items-center gap-3">
           <button className="md:hidden">
-            <Avatar
-              label="Name Surname"
-              imageUrl="https://i.stack.imgur.com/34AD2.jpg"
-            />
+            <Avatar label="Name Surname" />
           </button>
           {currentPath.toLowerCase() !== "search" && currentPage}
         </div>
