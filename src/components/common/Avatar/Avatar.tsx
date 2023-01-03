@@ -43,7 +43,7 @@ const Avatar = ({
     <Link
       href={href}
       onClick={onClick}
-      className={`${sizeClasses} flex items-center justify-center rounded-full border-2 border-neutral-100 bg-gradient-to-tl from-slate-300 transition-colors ease-linear hover:cursor-pointer`}
+      className={`${sizeClasses} flex items-center justify-center rounded-full border-2 border-neutral-100 bg-gradient-to-tl from-slate-300 text-xs transition-colors ease-linear hover:cursor-pointer md:text-sm`}
     >
       {!imageUrl ? (
         getInitials(name)
