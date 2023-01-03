@@ -27,9 +27,12 @@ const Navbar = () => {
     <header className="sticky top-0 left-0 right-0 z-10 flex h-14 w-full justify-between border-b-[1px] bg-white/80 py-2.5 px-4 backdrop-blur-md">
       <nav className="flex w-full flex-row items-center justify-between gap-5">
         <div className="flex items-center gap-3">
-          <span className="lg:hidden">
-            <Avatar imageUrl="https://pbs.twimg.com/profile_images/1080208417426497538/suSAGU_u_400x400.jpg" />
-          </span>
+          <button className="md:hidden">
+            <Avatar
+              label="Name Surname"
+              imageUrl="https://i.stack.imgur.com/34AD2.jpg"
+            />
+          </button>
           {currentPath.toLowerCase() !== "search" && currentPage}
         </div>
 
