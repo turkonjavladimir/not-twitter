@@ -116,9 +116,9 @@ const Sidebar = () => {
   });
 
   return (
-    <aside className="sticky top-0 hidden h-screen items-center border-r-[1px] md:flex md:flex-col xl:w-full xl:max-w-[275px] xl:justify-start">
-      <div className="flex h-[650px] w-full flex-col items-center justify-between overflow-y-auto px-5 md:h-full xl:items-start">
-        <div className="flex flex-col items-center lg:w-full xl:items-start">
+    <aside className="sticky top-0 hidden h-screen items-center border-r-[1px] md:flex md:flex-col">
+      <div className="flex h-[650px] w-full flex-col items-center justify-between overflow-y-auto px-5 md:h-full">
+        <div className="flex flex-col items-center xl:items-start">
           <div>
             <Link
               className="text-md flex w-full items-center justify-center px-3 py-4"
