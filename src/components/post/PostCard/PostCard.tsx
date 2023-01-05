@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   ArrowPathRoundedSquareIcon,
   ChatBubbleOvalLeftIcon,
@@ -5,10 +6,9 @@ import {
   HeartIcon,
   ShareIcon,
 } from "@heroicons/react/24/outline";
-import Link from "next/link";
-import { Avatar } from "../../common/Avatar";
-
 import { CheckBadgeIcon, UserIcon } from "@heroicons/react/24/solid";
+
+import { Avatar } from "../../common/Avatar";
 
 type PostHeaderProps = {
   name: string;
@@ -24,10 +24,7 @@ const PostHeader = ({ name, username, time, verified }: PostHeaderProps) => {
           href="/"
           className="flex min-w-0 items-center gap-1 hover:underline"
         >
-          <span className="truncate text-sm font-bold">
-            {name} Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Rem, aut?
-          </span>
+          <span className="truncate text-sm font-bold">{name}</span>
 
           {verified && (
             <CheckBadgeIcon className="h-5 w-5 shrink-0 text-sky-500" />
