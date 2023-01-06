@@ -79,18 +79,18 @@ const PostCard = () => {
     <div className="flex flex-col border-b-[1px]">
       <article className="flex flex-row">
         <div className="flex w-full min-w-0 flex-col">
-          <div className="mt-2 mb-1 flex items-center gap-2">
-            <div className="ml-14">
+          <div className="mt-2 mb-1 ml-8 flex items-center gap-2 px-4">
+            <div className="">
               <UserIcon className="h-3 w-3" />
             </div>
             <span className="break-words text-xs font-bold text-neutral-500">
               User One and User Two follow
             </span>
           </div>
-          <div className="flex">
+          <div className="flex px-4">
             {/* Uer Avatar */}
-            <div className="flex flex-col items-center">
-              <div className="flex flex-row gap-3 px-4 pb-1">
+            <div className="mr-3 flex flex-col items-center">
+              <div className="flex flex-row gap-3 pb-1">
                 <Link href="/profile/me">
                   <Avatar size="md" label="NS" />
                 </Link>
@@ -108,7 +108,7 @@ const PostCard = () => {
               />
 
               {/* Content */}
-              <div>
+              <div className="">
                 <span className="text-sm">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Provident rem recusandae ex qui non quae adipisci veritatis,
