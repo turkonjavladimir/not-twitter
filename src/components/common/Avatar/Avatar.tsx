@@ -30,10 +30,12 @@ const Avatar = ({ label = "", size = "sm", imageUrl = "" }: AvatarProps) => {
 
   return (
     <span
-      className={`${sizeClasses} flex items-center justify-center rounded-full border-2 border-neutral-100 bg-gradient-to-tl from-slate-300 text-xs transition-colors ease-linear hover:cursor-pointer md:text-sm`}
+      className={`${sizeClasses} inline-flex items-center justify-center rounded-full border-2 border-neutral-100 bg-gradient-to-tl from-slate-300 transition-colors ease-linear hover:cursor-pointer md:text-sm`}
     >
       {!imageUrl ? (
-        getInitials(label)
+        <span className="text-xs font-medium leading-none text-black">
+          {getInitials(label)}
+        </span>
       ) : (
         <Image
           className="w-12 rounded-full object-cover"
