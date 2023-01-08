@@ -26,7 +26,7 @@ const Navbar = () => {
     );
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-10 flex h-14 w-full justify-between border-b-[1px] bg-white/80 py-2.5 px-4 backdrop-blur-md">
+    <header className="sticky top-0 left-0 right-0 z-10 flex h-14 w-full justify-between border-b-[1px] bg-white/80 py-2.5 px-4 backdrop-blur-md dark:border-neutral-700 dark:bg-neutral-800/80">
       <nav className="flex w-full flex-row items-center justify-between gap-5">
         <div className="flex items-center gap-3">
           <button className="md:hidden">
