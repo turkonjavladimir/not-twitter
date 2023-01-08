@@ -4,7 +4,7 @@ import { Cog8ToothIcon } from "@heroicons/react/24/outline";
 import { Avatar } from "../Avatar";
 import Searchbar from "../Searchbar";
 
-import ThemeSwitcher from "../../ui/ThemeSwitcher";
+import { ThemeSwitcher } from "../../ui";
 
 const Navbar = () => {
   const router = useRouter();
