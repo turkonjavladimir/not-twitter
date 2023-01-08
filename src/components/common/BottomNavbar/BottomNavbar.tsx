@@ -40,7 +40,7 @@ const BottomNavbar = () => {
     >
       <span
         className={`rounded-full p-2 ${
-          router?.asPath === item?.url ? "bg-gray-100" : ""
+          router?.asPath === item?.url ? "bg-gray-100 dark:bg-neutral-600" : ""
         }`}
       >
         {item?.icon}
@@ -49,7 +49,7 @@ const BottomNavbar = () => {
   ));
 
   return (
-    <div className="fixed bottom-0 flex w-full justify-center border-t-[1px] bg-white">
+    <div className="fixed bottom-0 flex w-full justify-center border-t-[1px] bg-white dark:border-neutral-700 dark:bg-neutral-800">
       <nav className="flex w-full max-w-xl justify-between md:hidden">
         {navItems}
       </nav>
