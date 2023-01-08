@@ -58,8 +58,8 @@ export const NavItem = ({ label, icon, active }: NavItemProps) => {
   return (
     <span
       className={`${
-        active ? "bg-gray-100 font-semibold" : ""
-      } flex w-full items-center justify-center rounded-full p-3 text-sm transition-colors hover:bg-gray-100 lg:justify-start`}
+        active ? "bg-gray-100 font-semibold dark:bg-neutral-700" : ""
+      } flex w-full items-center justify-center rounded-full p-3 text-sm transition-colors hover:bg-gray-100 dark:hover:bg-neutral-700 lg:justify-start`}
     >
       <div className="flex items-center gap-4">
         <div>{icon}</div>
@@ -80,7 +80,7 @@ type UserAvatarProps = {
 const UserAvatar = ({ imageUrl, username, label }: UserAvatarProps) => {
   /* @TODO: Make a functional dropdown/popup */
   return (
-    <div className="mt-1 mb-4 flex cursor-pointer items-center gap-3 rounded-full p-2 transition-colors hover:bg-gray-100">
+    <div className="mt-1 mb-4 flex cursor-pointer items-center gap-3 rounded-full p-2 transition-colors hover:bg-gray-100 dark:hover:bg-neutral-700">
       <button>
         <Avatar size="lg" label={label} imageUrl={imageUrl} />
       </button>
@@ -116,7 +116,7 @@ const Sidebar = () => {
   });
 
   return (
-    <aside className="sticky top-0 hidden h-screen items-center border-r-[1px] md:flex md:flex-col">
+    <aside className="sticky top-0 hidden h-screen items-center border-r-[1px] dark:border-neutral-700 dark:bg-neutral-800 md:flex md:flex-col">
       <div className="flex h-[650px] w-full flex-col items-center justify-between overflow-y-auto px-5 md:h-full">
         <div className="flex flex-col items-center xl:items-start">
           <div>
