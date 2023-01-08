@@ -4,6 +4,8 @@ import { Cog8ToothIcon } from "@heroicons/react/24/outline";
 import { Avatar } from "../Avatar";
 import Searchbar from "../Searchbar";
 
+import ThemeSwitcher from "../../ui/ThemeSwitcher";
+
 const Navbar = () => {
   const router = useRouter();
 
@@ -35,7 +37,8 @@ const Navbar = () => {
 
         {currentPath.toLowerCase() === "search" && <Searchbar />}
 
-        <div>
+        <div className="flex items-center gap-3">
+          <ThemeSwitcher />
           <Cog8ToothIcon className="h-6 w-6 cursor-pointer" />
         </div>
       </nav>
