@@ -15,18 +15,22 @@ const bottonNavLinks = [
   {
     icon: <HomeIcon className="h-6 w-6" />,
     url: "/",
+    label: "Home",
   },
   {
     icon: <MagnifyingGlassIcon className="h-6 w-6" />,
     url: "/search",
+    label: "Search",
   },
   {
     icon: <BellIcon className="h-6 w-6" />,
     url: "/notifications",
+    label: "Notifications",
   },
   {
     icon: <EnvelopeIcon className="h-6 w-6" />,
     url: "/messages",
+    label: "Messages",
   },
 ];
 
@@ -37,6 +41,7 @@ const BottomNavbar = () => {
       key={item?.url}
       className={`flex w-full items-center justify-center rounded-lg py-1 text-sm`}
       href={item?.url}
+      aria-label={item?.label}
     >
       <span
         className={`rounded-full p-2 ${
