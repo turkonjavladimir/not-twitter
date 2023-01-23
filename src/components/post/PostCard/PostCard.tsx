@@ -9,6 +9,7 @@ import {
 import { CheckBadgeIcon, UserIcon } from "@heroicons/react/24/solid";
 
 import { Avatar } from "../../common/Avatar";
+import Dropdown from "../../ui/Dropdown";
 
 type PostHeaderProps = {
   name: string;
@@ -34,7 +35,8 @@ const PostHeader = ({ name, username, time, verified }: PostHeaderProps) => {
         <span className="truncate text-sm text-neutral-500">@{username}</span>
         <span className="shrink-0 text-sm text-neutral-500">{time}</span>
       </div>
-      <button className="px-4">
+
+      <button className="px-4" aria-label="ptweetst - more options">
         <EllipsisHorizontalIcon className="h-5 w-5" />
       </button>
     </div>
@@ -45,28 +47,31 @@ const PostActions = () => {
   return (
     <div>
       <div className="mt-3 mb-1 flex gap-3">
-        <button className="min-w-0">
+        <button className="min-w-0" aria-label="reply to tweet">
           <div className="flex min-w-0 items-center gap-1 rounded-full transition-colors hover:text-sky-600">
             <ChatBubbleOvalLeftIcon className="h-5 w-5 shrink-0" />
             <span className="truncate text-xs">1,669</span>
           </div>
         </button>
 
-        <button className="min-w-0">
+        <button className="min-w-0" aria-label="retweet">
           <div className="flex items-center gap-1 transition-colors hover:text-green-600">
             <ArrowPathRoundedSquareIcon className="h-5 w-5 shrink-0" />
             <span className="truncate text-xs">14.9k</span>
           </div>
         </button>
 
-        <button className="min-w-0">
+        <button className="min-w-0" aria-label="like tweet">
           <div className="flex items-center gap-1 transition-colors hover:text-red-600">
             <HeartIcon className="h-5 w-5 shrink-0" />
             <span className="truncate text-xs">359</span>
           </div>
         </button>
 
-        <button className="min-w-0 transition-colors hover:text-blue-500">
+        <button
+          aria-label="share tweet"
+          className="min-w-0 transition-colors hover:text-blue-500"
+        >
           <ShareIcon className="h-5 w-5 shrink-0" />
         </button>
       </div>
@@ -76,7 +81,7 @@ const PostActions = () => {
 
 const PostCard = () => {
   return (
-    <div className="flex flex-col border-b-[1px]">
+    <div className="flex flex-col border-b-[1px] dark:border-neutral-700">
       <article className="flex flex-row">
         <div className="flex w-full min-w-0 flex-col">
           <div className="mt-2 mb-1 ml-8 flex items-center gap-2 px-4">
@@ -95,7 +100,7 @@ const PostCard = () => {
                   <Avatar size="md" label="NS" />
                 </Link>
               </div>
-              <div className="h-full w-[1px] rounded-full bg-gray-200"></div>
+              <div className="h-full w-[1px] rounded-full bg-gray-200 dark:bg-neutral-700"></div>
             </div>
 
             <div className="flex w-full min-w-0 flex-col">
@@ -122,7 +127,7 @@ const PostCard = () => {
 
           <Link
             href="/"
-            className="flex items-center gap-3 px-3 py-1 transition-colors hover:bg-gray-100"
+            className="flex items-center gap-3 px-3 py-2 transition-colors hover:bg-gray-100 dark:hover:bg-neutral-800"
           >
             <div className="shrink-0 px-2">
               <Avatar label="NU" />

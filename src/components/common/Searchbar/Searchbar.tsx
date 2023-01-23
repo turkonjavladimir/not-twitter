@@ -13,7 +13,7 @@ const Searchbar = () => {
         type="email"
         name="email"
         id="email"
-        className="text-md block w-full rounded-full bg-gray-100 py-1 pl-10 focus:outline-sky-500 lg:py-2"
+        className="text-md block w-full rounded-full bg-gray-100 py-1 pl-10 focus:outline-sky-500 dark:bg-neutral-700 lg:py-2"
         placeholder="Search"
       />
     </div>

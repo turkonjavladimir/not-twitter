@@ -14,6 +14,7 @@ import {
 
 import { Avatar } from "../Avatar";
 import generateSlug from "../../../lib/generate-slug";
+import { useUI } from "../../ui/context";
 
 const bottonNavLinks = [
   {
@@ -58,7 +59,7 @@ export const NavItem = ({ label, icon, active }: NavItemProps) => {
   return (
     <span
       className={`${
-        active ? "bg-gray-100 font-semibold dark:bg-neutral-700" : ""
+        active ? "bg-gray-100 dark:bg-neutral-700" : ""
       } flex w-full items-center justify-center rounded-full p-3 text-sm transition-colors hover:bg-gray-100 dark:hover:bg-neutral-700 lg:justify-start`}
     >
       <div className="flex items-center gap-4">
@@ -79,9 +80,10 @@ type UserAvatarProps = {
 
 const UserAvatar = ({ imageUrl, username, label }: UserAvatarProps) => {
   /* @TODO: Make a functional dropdown/popup */
+  const { toggleSidebar } = useUI();
   return (
     <div className="mt-1 mb-4 flex cursor-pointer items-center gap-3 rounded-full p-2 transition-colors hover:bg-gray-100 dark:hover:bg-neutral-700">
-      <button>
+      <button onClick={toggleSidebar}>
         <Avatar size="lg" label={label} imageUrl={imageUrl} />
       </button>
 
@@ -132,7 +134,7 @@ const Sidebar = () => {
             {navItems}
 
             {/* @TODO: Add dropdown menu */}
-            <button onClick={() => console.log("Setttings menu")}>
+            <button onClick={() => console.log("Toggle more")}>
               <NavItem
                 icon={<EllipsisHorizontalCircleIcon className="h-6 w-6" />}
                 label="More"
@@ -148,6 +150,7 @@ const Sidebar = () => {
             <span className="hidden text-center xl:block">Post</span>
           </button>
         </div>
+
         <UserAvatar label="Name Surname" username="username" />
       </div>
     </aside>
