@@ -10,7 +10,7 @@ const Settings = () => {
         <span className="font-semibold">Settings</span>
       </div>
       <div className="ml-1 flex h-auto max-h-64 flex-shrink-0 flex-col overflow-y-auto">
-        <ManualThemeToggle />
+        <ManualThemeToggle hasLabel />
         <SystemThemeToggle />
 
         <Link
