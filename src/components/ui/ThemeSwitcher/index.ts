@@ -1,2 +1,2 @@
-export { default as ThemeSwitcher } from "./ThemeSwitcher";
-export { default as ManualThemeSwitcher } from "./ManualThemeSwitcher";
+export { default as SystemThemeToggle } from "./SystemThemeToggle";
+export { default as ManualThemeToggle } from "./ManualThemeToggle";

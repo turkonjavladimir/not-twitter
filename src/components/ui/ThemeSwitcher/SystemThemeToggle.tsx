@@ -17,16 +17,19 @@ const ThemeSwitcher = () => {
   }
 
   return (
-    <Toggle
-      onChange={() => {
-        if (theme === "system" && resolvedTheme) {
-          setTheme(resolvedTheme);
-        } else {
-          setTheme("system");
-        }
-      }}
-      enabled={theme === "system"}
-    />
+    <div className="flex min-w-0 items-center justify-between p-2">
+      <span className="truncate">Use system theme</span>
+      <Toggle
+        onChange={() => {
+          if (theme === "system" && resolvedTheme) {
+            setTheme(resolvedTheme);
+          } else {
+            setTheme("system");
+          }
+        }}
+        enabled={theme === "system"}
+      />
+    </div>
   );
 };
 
