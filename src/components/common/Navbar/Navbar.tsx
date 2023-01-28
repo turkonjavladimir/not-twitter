@@ -33,10 +33,15 @@ const Navbar = () => {
           <button className="md:hidden" onClick={toggleSidebar}>
             <Avatar label="Name Surname" />
           </button>
-          {currentPath.toLowerCase() !== "search" && currentPage}
+          <span className="hidden md:block">
+            {currentPath.toLowerCase() !== "search" && currentPage}
+          </span>
         </div>
 
         {currentPath.toLowerCase() === "search" && <Searchbar />}
+        {currentPath.toLowerCase() !== "search" && (
+          <div className="md:hidden">Logo</div>
+        )}
 
         <div className="flex items-center gap-3">
           <Cog8ToothIcon className="h-6 w-6 cursor-pointer" />
