@@ -29,7 +29,7 @@ const CardHeader = ({ name, username, time, verified }: PostHeaderProps) => {
         <span className="shrink-0 text-sm text-neutral-500">{time}</span>
       </div>
 
-      <CardDropdownMenu />
+      {/*       <CardDropdownMenu /> */}
     </div>
   );
 };
