@@ -3,9 +3,9 @@ import Link from "next/link";
 import { Avatar } from "../../common/Avatar";
 
 function formatNumber(value: string) {
-  let length = (Math.abs(parseInt(value, 10)) + "").length,
-    index = Math.ceil((length - 3) / 3),
-    suffix = ["K", "M", "B", "T"];
+  const length = (Math.abs(parseInt(value, 10)) + "").length;
+  const index = Math.ceil((length - 3) / 3);
+  const suffix = ["K", "M", "B", "T"];
 
   if (length < 4) return value;
 
