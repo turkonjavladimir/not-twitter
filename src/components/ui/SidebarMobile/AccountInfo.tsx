@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Avatar } from "../../common/Avatar";
 
 function formatNumber(value: string) {
-  var length = (Math.abs(parseInt(value, 10)) + "").length,
+  let length = (Math.abs(parseInt(value, 10)) + "").length,
     index = Math.ceil((length - 3) / 3),
     suffix = ["K", "M", "B", "T"];
 
