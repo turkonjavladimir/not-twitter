@@ -4,7 +4,10 @@ import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 import { trpc } from "../utils/trpc";
-import { Card } from "../components/post";
+/* import { Card } from "../components/post"; */
+import { lazy, Suspense } from "react";
+
+const Card = lazy(() => import("../components/post/Card"));
 
 const Home: NextPage = () => {
   const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
@@ -17,26 +20,21 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      <Suspense fallback={<h1>Still Loading…</h1>}>
+        <Card />
+
+        <Card />
+        <Card />
+
+        <Card />
+        <Card />
+
+        <Card />
+        <Card />
+
+        <Card />
+        <Card />
+      </Suspense>
 
       {/*  <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
