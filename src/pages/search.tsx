@@ -25,7 +25,7 @@ const search = () => {
       <section className="border-b border-neutral-200 p-1 dark:border-neutral-700">
         <div>
           <span className="block px-4 py-3 text-xl font-bold">
-            What's happening
+            {`What's happening`}
           </span>
           {[1, 2]?.map((index) => (
             <Card key={index} />
