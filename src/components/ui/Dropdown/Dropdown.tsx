@@ -7,8 +7,7 @@ export const MenuItem = ({
   icon,
 }: {
   text: string;
-
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
 }) => {
   return (
     <Menu.Item>
