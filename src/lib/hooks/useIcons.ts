@@ -8,6 +8,10 @@ import {
   MagnifyingGlassIcon as MagnifyingGlassIconOutline,
   BellIcon as BellIconOutline,
   EnvelopeIcon as EnvelopeIconOutline,
+  ChatBubbleOvalLeftIcon as ChatBubbleOvalLeftIconOutline,
+  ArrowPathRoundedSquareIcon as ArrowPathRoundedSquareIconOutline,
+  HeartIcon as HeartIconOutline,
+  ShareIcon as ShareIconOutline,
 } from "@heroicons/react/24/outline";
 import {
   CheckIcon as CheckIconSolid,
@@ -18,6 +22,10 @@ import {
   MagnifyingGlassIcon as MagnifyingGlassIconSolid,
   BellIcon as BellIconSolid,
   EnvelopeIcon as EnvelopeIconSolid,
+  ChatBubbleOvalLeftIcon as ChatBubbleOvalLeftIconSolid,
+  ArrowPathRoundedSquareIcon as ArrowPathRoundedSquareIconSolid,
+  HeartIcon as HeartIconSolid,
+  ShareIcon as ShareIconSolid,
 } from "@heroicons/react/24/solid";
 
 type XIcon = typeof XIconOutline | typeof XIconSolid;
@@ -26,12 +34,20 @@ type HomeIcon = typeof HomeIconOutline | typeof HomeIconSolid;
 type CheckIcon = typeof CheckIconOutline | typeof CheckIconSolid;
 type BellIcon = typeof BellIconOutline | typeof BellIconSolid;
 type EnvelopeIcon = typeof EnvelopeIconOutline | typeof EnvelopeIconSolid;
+type HeartIcon = typeof HeartIconOutline | typeof HeartIconSolid;
+type ShareIcon = typeof ShareIconOutline | typeof ShareIconSolid;
 type MagnifyingGlassIcon =
   | typeof MagnifyingGlassIconOutline
   | typeof MagnifyingGlassIconSolid;
 type InformationCircleIcon =
   | typeof InformationCircleIconOutline
   | typeof InformationCircleIconSolid;
+type ChatBubbleOvalLeft =
+  | typeof ChatBubbleOvalLeftIconOutline
+  | typeof ChatBubbleOvalLeftIconSolid;
+type ArrowPathRoundedSquareIcon =
+  | typeof ArrowPathRoundedSquareIconOutline
+  | typeof ArrowPathRoundedSquareIconSolid;
 
 export interface Icons {
   [key: string]: {
@@ -43,7 +59,11 @@ export interface Icons {
       | UserIcon
       | MagnifyingGlassIcon
       | BellIcon
-      | EnvelopeIcon;
+      | EnvelopeIcon
+      | ChatBubbleOvalLeft
+      | ArrowPathRoundedSquareIcon
+      | HeartIcon
+      | ShareIcon;
     solid:
       | CheckIcon
       | XIcon
@@ -52,7 +72,11 @@ export interface Icons {
       | UserIcon
       | MagnifyingGlassIcon
       | BellIcon
-      | EnvelopeIcon;
+      | EnvelopeIcon
+      | ChatBubbleOvalLeft
+      | ArrowPathRoundedSquareIcon
+      | HeartIcon
+      | ShareIcon;
   };
 }
 
@@ -79,6 +103,22 @@ export const icons: Icons = {
   envelope: {
     outline: EnvelopeIconOutline,
     solid: EnvelopeIconSolid,
+  },
+  chatBubbleOvalLeft: {
+    outline: ChatBubbleOvalLeftIconOutline,
+    solid: ChatBubbleOvalLeftIconSolid,
+  },
+  arrowPathRoundedSquare: {
+    outline: ArrowPathRoundedSquareIconOutline,
+    solid: ArrowPathRoundedSquareIconSolid,
+  },
+  heart: {
+    outline: HeartIconOutline,
+    solid: HeartIconSolid,
+  },
+  share: {
+    outline: ShareIconOutline,
+    solid: ShareIconSolid,
   },
 };
 

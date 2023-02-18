@@ -10,7 +10,11 @@ export type IconName =
   | "user"
   | "magnifyingGlass"
   | "bell"
-  | "envelope";
+  | "envelope"
+  | "chatBubbleOvalLeft"
+  | "arrowPathRoundedSquare"
+  | "heart"
+  | "share";
 
 interface IconProps {
   name: IconName;
