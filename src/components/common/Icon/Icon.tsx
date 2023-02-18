@@ -15,7 +15,8 @@ export type IconName =
   | "arrowPathRoundedSquare"
   | "heart"
   | "share"
-  | "checkBadge";
+  | "checkBadge"
+  | "ellipsisHorizontal";
 
 interface IconProps {
   name: IconName;

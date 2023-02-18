@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
+
+import Icon from "../../common/Icon";
 
 export const MenuItem = ({
   text,
@@ -29,7 +30,8 @@ const Dropdown = ({ children }: { children: React.ReactNode }) => {
       <div>
         <Menu.Button className="flex items-center rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-neutral-600">
           <span className="sr-only">Open options</span>
-          <EllipsisHorizontalIcon className="h-5 w-5" />
+          {/* <EllipsisHorizontalIcon className="h-5 w-5" /> */}
+          <Icon name="ellipsisHorizontal" />
         </Menu.Button>
       </div>
 

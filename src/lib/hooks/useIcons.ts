@@ -13,6 +13,7 @@ import {
   HeartIcon as HeartIconOutline,
   ShareIcon as ShareIconOutline,
   CheckBadgeIcon as CheckBadgeIconOutline,
+  EllipsisHorizontalIcon as EllipsisHorizontalIconOutline,
 } from "@heroicons/react/24/outline";
 import {
   CheckIcon as CheckIconSolid,
@@ -28,6 +29,7 @@ import {
   HeartIcon as HeartIconSolid,
   ShareIcon as ShareIconSolid,
   CheckBadgeIcon as CheckBadgeIconSolid,
+  EllipsisHorizontalIcon as EllipsisHorizontalIconSolid,
 } from "@heroicons/react/24/solid";
 
 export const icons = {
@@ -73,6 +75,10 @@ export const icons = {
   checkBadge: {
     outline: CheckBadgeIconOutline,
     solid: CheckBadgeIconSolid,
+  },
+  ellipsisHorizontal: {
+    outline: EllipsisHorizontalIconOutline,
+    solid: EllipsisHorizontalIconSolid,
   },
 } as const;
 
