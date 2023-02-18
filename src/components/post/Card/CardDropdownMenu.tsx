@@ -1,11 +1,4 @@
-import {
-  BellSlashIcon,
-  FlagIcon,
-  NoSymbolIcon,
-  PencilSquareIcon,
-  TrashIcon,
-  XCircleIcon,
-} from "@heroicons/react/24/outline";
+import Icon from "../../common/Icon";
 import Dropdown from "../../ui/Dropdown";
 import { MenuItem } from "../../ui/Dropdown/Dropdown";
 
@@ -15,59 +8,34 @@ const CardDropdownMenu = () => {
       <div className="py-1">
         <MenuItem
           text="Edit"
-          icon={
-            <PencilSquareIcon
-              className="mr-3 h-5 w-5 group-hover:text-gray-500"
-              aria-hidden="true"
-            />
-          }
+          icon={<Icon name="pencilSquare" className="h-5 w-5" />}
         />
         <MenuItem
           text="Unfollow"
-          icon={
-            <XCircleIcon
-              className="mr-3 h-5 w-5 group-hover:text-gray-500"
-              aria-hidden="true"
-            />
-          }
+          icon={<Icon name="xCircle" className="h-5 w-5" />}
         />
       </div>
       <div className="py-1">
         <MenuItem
           text="Block"
-          icon={
-            <NoSymbolIcon
-              className="mr-3 h-5 w-5 group-hover:text-gray-500"
-              aria-hidden="true"
-            />
-          }
+          icon={<Icon name="noSymbol" className="h-5 w-5" />}
         />
         <MenuItem
           text="Mute"
-          icon={
-            <BellSlashIcon
-              className="mr-3 h-5 w-5 group-hover:text-gray-500"
-              aria-hidden="true"
-            />
-          }
+          icon={<Icon name="bellSlash" className="h-5 w-5" />}
         />
         <MenuItem
           text="Report"
-          icon={
-            <FlagIcon
-              className="mr-3 h-5 w-5 group-hover:text-gray-500"
-              aria-hidden="true"
-            />
-          }
+          icon={<Icon name="flag" className="h-5 w-5" />}
         />
       </div>
 
       <div className="py-1">
         <MenuItem
           icon={
-            <TrashIcon
-              className="mr-3 h-5 w-5 text-red-400 group-hover:text-gray-500"
-              aria-hidden="true"
+            <Icon
+              name="trash"
+              className="h-5 w-5 text-red-400 group-hover:text-gray-500"
             />
           }
           text="Delete"

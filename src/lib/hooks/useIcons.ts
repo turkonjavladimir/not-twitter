@@ -14,6 +14,12 @@ import {
   ShareIcon as ShareIconOutline,
   CheckBadgeIcon as CheckBadgeIconOutline,
   EllipsisHorizontalIcon as EllipsisHorizontalIconOutline,
+  PencilSquareIcon as PencilSquareIconOutline,
+  XCircleIcon as XCircleIconOutline,
+  NoSymbolIcon as NoSymbolIconOutline,
+  BellSlashIcon as BellSlashIconOutline,
+  FlagIcon as FlagIconOutline,
+  TrashIcon as TrashIconOutline,
 } from "@heroicons/react/24/outline";
 import {
   CheckIcon as CheckIconSolid,
@@ -30,6 +36,12 @@ import {
   ShareIcon as ShareIconSolid,
   CheckBadgeIcon as CheckBadgeIconSolid,
   EllipsisHorizontalIcon as EllipsisHorizontalIconSolid,
+  PencilSquareIcon as PencilSquareIconSolid,
+  XCircleIcon as XCircleIconSolid,
+  NoSymbolIcon as NoSymbolIconSolid,
+  BellSlashIcon as BellSlashIconSolid,
+  FlagIcon as FlagIconSolid,
+  TrashIcon as TrashIconSolid,
 } from "@heroicons/react/24/solid";
 
 export const icons = {
@@ -79,6 +91,30 @@ export const icons = {
   ellipsisHorizontal: {
     outline: EllipsisHorizontalIconOutline,
     solid: EllipsisHorizontalIconSolid,
+  },
+  pencilSquare: {
+    outline: PencilSquareIconOutline,
+    solid: PencilSquareIconSolid,
+  },
+  xCircle: {
+    outline: XCircleIconOutline,
+    solid: XCircleIconSolid,
+  },
+  noSymbol: {
+    outline: NoSymbolIconOutline,
+    solid: NoSymbolIconSolid,
+  },
+  bellSlash: {
+    outline: BellSlashIconOutline,
+    solid: BellSlashIconSolid,
+  },
+  flag: {
+    outline: FlagIconOutline,
+    solid: FlagIconSolid,
+  },
+  trash: {
+    outline: TrashIconOutline,
+    solid: TrashIconSolid,
   },
 } as const;
 

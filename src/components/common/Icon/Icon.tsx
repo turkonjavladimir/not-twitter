@@ -16,7 +16,13 @@ export type IconName =
   | "heart"
   | "share"
   | "checkBadge"
-  | "ellipsisHorizontal";
+  | "ellipsisHorizontal"
+  | "pencilSquare"
+  | "xCircle"
+  | "noSymbol"
+  | "bellSlash"
+  | "flag"
+  | "trash";
 
 interface IconProps {
   name: IconName;
