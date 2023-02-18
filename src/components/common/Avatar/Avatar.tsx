@@ -18,15 +18,17 @@ const getInitials = (label: string) => {
 
   if (label.length <= 3) return label;
 
-  return label
-    ?.split(/\s+/)
-    .map((w) => [...w][0])
-    .slice(0, 3)
-    .join("");
+  return (
+    label
+      ?.split(/\s+/)
+      .map((w) => [...w][0])
+      .slice(0, 3)
+      .join("") ?? ""
+  );
 };
 
 const Avatar = ({ label = "", size = "sm", imageUrl = "" }: AvatarProps) => {
-  const sizeClasses = size === "sm" ? "w-8 h-8" : sizes[size];
+  const sizeClasses = sizes[size] || sizes.sm;
 
   return (
     <span
