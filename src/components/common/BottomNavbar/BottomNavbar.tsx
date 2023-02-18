@@ -1,57 +1,48 @@
+import cn from "classnames";
 import Link from "next/link";
-
-import {
-  HomeIcon,
-  MagnifyingGlassIcon,
-  BellIcon,
-  EnvelopeIcon,
-} from "@heroicons/react/24/outline";
+import { useMemo } from "react";
 import { useRouter } from "next/router";
 
-/**
- * @TODO: revisit icons | add active state
- */
-const bottonNavLinks = [
-  {
-    icon: <HomeIcon className="h-6 w-6" />,
-    url: "/",
-    label: "Home",
-  },
-  {
-    icon: <MagnifyingGlassIcon className="h-6 w-6" />,
-    url: "/search",
-    label: "Search",
-  },
-  {
-    icon: <BellIcon className="h-6 w-6" />,
-    url: "/notifications",
-    label: "Notifications",
-  },
-  {
-    icon: <EnvelopeIcon className="h-6 w-6" />,
-    url: "/messages",
-    label: "Messages",
-  },
+import Icon from "../Icon";
+import { IconName } from "../Icon/Icon";
+
+interface NavItemProps {
+  iconName: IconName;
+  url: string;
+  label: string;
+}
+
+const bottonNavLinks: NavItemProps[] = [
+  { iconName: "home", url: "/", label: "Home" },
+  { iconName: "magnifyingGlass", url: "/search", label: "Search" },
+  { iconName: "bell", url: "/notifications", label: "Notifications" },
+  { iconName: "envelope", url: "/messages", label: "Messages" },
 ];
 
 const BottomNavbar = () => {
   const router = useRouter();
-  const navItems = bottonNavLinks?.map((item) => (
-    <Link
-      key={item?.url}
-      className={`flex w-full items-center justify-center rounded-lg py-1 text-sm`}
-      href={item?.url}
-      aria-label={item?.label}
-    >
-      <span
-        className={`rounded-full p-2 ${
-          router?.asPath === item?.url ? "bg-gray-100 dark:bg-neutral-600" : ""
-        }`}
-      >
-        {item?.icon}
-      </span>
-    </Link>
-  ));
+  const { pathname } = router;
+  const navItems = useMemo(
+    () =>
+      bottonNavLinks.map(({ iconName, url, label }: NavItemProps) => (
+        <Link
+          key={url}
+          className={`flex w-full items-center justify-center rounded-lg py-1 text-sm`}
+          href={url}
+          aria-label={label}
+          passHref
+        >
+          <Icon
+            name={iconName}
+            variant={`${pathname === url ? "solid" : "outline"}`}
+            className={cn("m-2 h-6 w-6", {
+              "text-neutral-600 dark:text-neutral-100": pathname === url,
+            })}
+          />
+        </Link>
+      )),
+    [pathname]
+  );
 
   return (
     <div className="fixed bottom-0 flex w-full justify-center border-t-[1px] bg-white dark:border-neutral-700 dark:bg-neutral-800">
