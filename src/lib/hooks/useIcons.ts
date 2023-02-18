@@ -12,6 +12,7 @@ import {
   ArrowPathRoundedSquareIcon as ArrowPathRoundedSquareIconOutline,
   HeartIcon as HeartIconOutline,
   ShareIcon as ShareIconOutline,
+  CheckBadgeIcon as CheckBadgeIconOutline,
 } from "@heroicons/react/24/outline";
 import {
   CheckIcon as CheckIconSolid,
@@ -26,61 +27,10 @@ import {
   ArrowPathRoundedSquareIcon as ArrowPathRoundedSquareIconSolid,
   HeartIcon as HeartIconSolid,
   ShareIcon as ShareIconSolid,
+  CheckBadgeIcon as CheckBadgeIconSolid,
 } from "@heroicons/react/24/solid";
 
-type XIcon = typeof XIconOutline | typeof XIconSolid;
-type UserIcon = typeof UserIconOutline | typeof UserIconSolid;
-type HomeIcon = typeof HomeIconOutline | typeof HomeIconSolid;
-type CheckIcon = typeof CheckIconOutline | typeof CheckIconSolid;
-type BellIcon = typeof BellIconOutline | typeof BellIconSolid;
-type EnvelopeIcon = typeof EnvelopeIconOutline | typeof EnvelopeIconSolid;
-type HeartIcon = typeof HeartIconOutline | typeof HeartIconSolid;
-type ShareIcon = typeof ShareIconOutline | typeof ShareIconSolid;
-type MagnifyingGlassIcon =
-  | typeof MagnifyingGlassIconOutline
-  | typeof MagnifyingGlassIconSolid;
-type InformationCircleIcon =
-  | typeof InformationCircleIconOutline
-  | typeof InformationCircleIconSolid;
-type ChatBubbleOvalLeft =
-  | typeof ChatBubbleOvalLeftIconOutline
-  | typeof ChatBubbleOvalLeftIconSolid;
-type ArrowPathRoundedSquareIcon =
-  | typeof ArrowPathRoundedSquareIconOutline
-  | typeof ArrowPathRoundedSquareIconSolid;
-
-export interface Icons {
-  [key: string]: {
-    outline:
-      | CheckIcon
-      | XIcon
-      | HomeIcon
-      | InformationCircleIcon
-      | UserIcon
-      | MagnifyingGlassIcon
-      | BellIcon
-      | EnvelopeIcon
-      | ChatBubbleOvalLeft
-      | ArrowPathRoundedSquareIcon
-      | HeartIcon
-      | ShareIcon;
-    solid:
-      | CheckIcon
-      | XIcon
-      | HomeIcon
-      | InformationCircleIcon
-      | UserIcon
-      | MagnifyingGlassIcon
-      | BellIcon
-      | EnvelopeIcon
-      | ChatBubbleOvalLeft
-      | ArrowPathRoundedSquareIcon
-      | HeartIcon
-      | ShareIcon;
-  };
-}
-
-export const icons: Icons = {
+export const icons = {
   check: { outline: CheckIconOutline, solid: CheckIconSolid },
   x: { outline: XIconOutline, solid: XIconSolid },
   home: { outline: HomeIconOutline, solid: HomeIconSolid },
@@ -120,7 +70,11 @@ export const icons: Icons = {
     outline: ShareIconOutline,
     solid: ShareIconSolid,
   },
-};
+  checkBadge: {
+    outline: CheckBadgeIconOutline,
+    solid: CheckBadgeIconSolid,
+  },
+} as const;
 
 export const useIcons = () => {
   const memoizedIcons = useMemo(() => icons, []);
