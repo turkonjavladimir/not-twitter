@@ -12,7 +12,7 @@ export const MenuItem = ({
 }) => {
   return (
     <Menu.Item>
-      <button className="flex w-full items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-700">
+      <button className="flex w-full items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-700">
         {icon}
         {text}
       </button>
