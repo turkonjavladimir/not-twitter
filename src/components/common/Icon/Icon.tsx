@@ -14,7 +14,8 @@ export type IconName =
   | "chatBubbleOvalLeft"
   | "arrowPathRoundedSquare"
   | "heart"
-  | "share";
+  | "share"
+  | "checkBadge";
 
 interface IconProps {
   name: IconName;
