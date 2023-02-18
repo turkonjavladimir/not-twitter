@@ -30,8 +30,7 @@ const Dropdown = ({ children }: { children: React.ReactNode }) => {
       <div>
         <Menu.Button className="flex items-center rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-neutral-600">
           <span className="sr-only">Open options</span>
-          {/* <EllipsisHorizontalIcon className="h-5 w-5" /> */}
-          <Icon name="ellipsisHorizontal" />
+          <Icon name="ellipsisHorizontal" className="h-5 w-5" />
         </Menu.Button>
       </div>
 
