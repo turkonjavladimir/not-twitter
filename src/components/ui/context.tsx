@@ -69,8 +69,7 @@ export const UIProvider: FC<{ children?: ReactNode }> = (props) => {
       toggleSidebar,
       closeSidebarIfPresent,
     }),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [state]
+    [state, openSidebar, closeSidebar, toggleSidebar, closeSidebarIfPresent]
   );
 
   return <UIContext.Provider value={value} {...props} />;
