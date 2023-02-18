@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { CheckBadgeIcon } from "@heroicons/react/24/solid";
 
+import Icon from "../../common/Icon";
 import CardDropdownMenu from "./CardDropdownMenu";
 
 type PostHeaderProps = {
@@ -21,7 +21,11 @@ const CardHeader = ({ name, username, time, verified }: PostHeaderProps) => {
           <span className="truncate text-sm font-bold">{name}</span>
 
           {verified && (
-            <CheckBadgeIcon className="h-5 w-5 shrink-0 text-sky-500" />
+            <Icon
+              name="checkBadge"
+              variant="solid"
+              className="h-5 w-5 shrink-0 text-sky-500"
+            />
           )}
         </Link>
 
