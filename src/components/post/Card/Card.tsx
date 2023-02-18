@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { UserIcon } from "@heroicons/react/24/solid";
 
 import { Avatar } from "../../common/Avatar";
 
+import Icon from "../../common/Icon";
 import CardHeader from "./CardHeader";
 import CardActions from "./CardActions";
 
@@ -13,7 +13,7 @@ const Card = () => {
         <div className="flex w-full min-w-0 flex-col">
           <div className="mt-2 mb-1 ml-8 flex items-center gap-2 px-4">
             <div className="">
-              <UserIcon className="h-3 w-3" />
+              <Icon name="user" className="h-3 w-3" />
             </div>
             <span className="break-words text-xs font-bold text-neutral-500">
               User One and User Two follow
