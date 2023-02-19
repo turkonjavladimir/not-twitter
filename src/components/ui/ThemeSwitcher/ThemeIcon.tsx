@@ -1,5 +1,4 @@
-import { MoonIcon } from "@heroicons/react/24/outline";
-import { MoonIcon as MoonIconSolid } from "@heroicons/react/24/solid";
+import Icon from "../../common/Icon";
 
 type ThemeIconProps = {
   theme?: string;
@@ -8,13 +7,13 @@ type ThemeIconProps = {
 const ThemeIcon = ({ theme }: ThemeIconProps) => {
   switch (theme) {
     case "light":
-      return <MoonIcon className="h-5 w-5" />;
+      return <Icon name="moonIcon" className="h-5 w-5" />;
 
     case "dark":
-      return <MoonIconSolid className="h-5 w-5" />;
+      return <Icon name="moonIcon" variant="solid" className="h-5 w-5" />;
 
     default:
-      return <MoonIcon className="h-5 w-5" />;
+      return <Icon name="moonIcon" className="h-5 w-5" />;
   }
 };
 

@@ -24,7 +24,8 @@ export type IconName =
   | "trash"
   | "user"
   | "xCircle"
-  | "x";
+  | "x"
+  | "moonIcon";
 
 interface IconProps {
   name: IconName;

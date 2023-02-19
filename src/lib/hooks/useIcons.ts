@@ -22,6 +22,7 @@ import {
   UserIcon as UserIconOutline,
   XCircleIcon as XCircleIconOutline,
   XMarkIcon as XIconOutline,
+  MoonIcon as MoonIconOutline,
 } from "@heroicons/react/24/outline";
 
 import {
@@ -47,6 +48,7 @@ import {
   UserIcon as UserIconSolid,
   XCircleIcon as XCircleIconSolid,
   XMarkIcon as XIconSolid,
+  MoonIcon as MoonIconSolid,
 } from "@heroicons/react/24/solid";
 
 export const icons = {
@@ -105,6 +107,10 @@ export const icons = {
   magnifyingGlass: {
     outline: MagnifyingGlassIconOutline,
     solid: MagnifyingGlassIconSolid,
+  },
+  moonIcon: {
+    outline: MoonIconOutline,
+    solid: MoonIconSolid,
   },
   noSymbol: {
     outline: NoSymbolIconOutline,
