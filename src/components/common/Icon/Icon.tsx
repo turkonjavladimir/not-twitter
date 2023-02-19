@@ -3,26 +3,28 @@ import { Fragment } from "react";
 import { useIcons } from "../../../lib/hooks/useIcons";
 
 export type IconName =
+  | "arrowPathRoundedSquare"
+  | "bell"
+  | "bellSlash"
   | "check"
-  | "x"
+  | "checkBadge"
+  | "chatBubbleOvalLeft"
+  | "ellipsisHorizontal"
+  | "envelope"
+  | "flag"
+  | "heart"
   | "home"
   | "info"
-  | "user"
+  | "lockClosed"
   | "magnifyingGlass"
-  | "bell"
-  | "envelope"
-  | "chatBubbleOvalLeft"
-  | "arrowPathRoundedSquare"
-  | "heart"
-  | "share"
-  | "checkBadge"
-  | "ellipsisHorizontal"
-  | "pencilSquare"
-  | "xCircle"
   | "noSymbol"
-  | "bellSlash"
-  | "flag"
-  | "trash";
+  | "pencilSquare"
+  | "plusCircle"
+  | "share"
+  | "trash"
+  | "user"
+  | "xCircle"
+  | "x";
 
 interface IconProps {
   name: IconName;

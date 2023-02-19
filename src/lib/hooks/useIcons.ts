@@ -1,88 +1,74 @@
 import { useMemo } from "react";
 import {
+  ArrowPathRoundedSquareIcon as ArrowPathRoundedSquareIconOutline,
+  BellIcon as BellIconOutline,
+  BellSlashIcon as BellSlashIconOutline,
+  ChatBubbleOvalLeftIcon as ChatBubbleOvalLeftIconOutline,
+  CheckBadgeIcon as CheckBadgeIconOutline,
   CheckIcon as CheckIconOutline,
-  XMarkIcon as XIconOutline,
+  EllipsisHorizontalIcon as EllipsisHorizontalIconOutline,
+  EnvelopeIcon as EnvelopeIconOutline,
+  FlagIcon as FlagIconOutline,
+  HeartIcon as HeartIconOutline,
   HomeIcon as HomeIconOutline,
   InformationCircleIcon as InformationCircleIconOutline,
-  UserIcon as UserIconOutline,
+  LockClosedIcon as LockClosedIconOutline,
   MagnifyingGlassIcon as MagnifyingGlassIconOutline,
-  BellIcon as BellIconOutline,
-  EnvelopeIcon as EnvelopeIconOutline,
-  ChatBubbleOvalLeftIcon as ChatBubbleOvalLeftIconOutline,
-  ArrowPathRoundedSquareIcon as ArrowPathRoundedSquareIconOutline,
-  HeartIcon as HeartIconOutline,
-  ShareIcon as ShareIconOutline,
-  CheckBadgeIcon as CheckBadgeIconOutline,
-  EllipsisHorizontalIcon as EllipsisHorizontalIconOutline,
-  PencilSquareIcon as PencilSquareIconOutline,
-  XCircleIcon as XCircleIconOutline,
   NoSymbolIcon as NoSymbolIconOutline,
-  BellSlashIcon as BellSlashIconOutline,
-  FlagIcon as FlagIconOutline,
+  PencilSquareIcon as PencilSquareIconOutline,
+  PlusCircleIcon as PlusCircleIconOutline,
+  ShareIcon as ShareIconOutline,
   TrashIcon as TrashIconOutline,
+  UserIcon as UserIconOutline,
+  XCircleIcon as XCircleIconOutline,
+  XMarkIcon as XIconOutline,
 } from "@heroicons/react/24/outline";
+
 import {
+  ArrowPathRoundedSquareIcon as ArrowPathRoundedSquareIconSolid,
+  BellIcon as BellIconSolid,
+  BellSlashIcon as BellSlashIconSolid,
+  ChatBubbleOvalLeftIcon as ChatBubbleOvalLeftIconSolid,
+  CheckBadgeIcon as CheckBadgeIconSolid,
   CheckIcon as CheckIconSolid,
-  XMarkIcon as XIconSolid,
+  EllipsisHorizontalIcon as EllipsisHorizontalIconSolid,
+  EnvelopeIcon as EnvelopeIconSolid,
+  FlagIcon as FlagIconSolid,
+  HeartIcon as HeartIconSolid,
   HomeIcon as HomeIconSolid,
   InformationCircleIcon as InformationCircleIconSolid,
-  UserIcon as UserIconSolid,
+  LockClosedIcon as LockClosedIconSolid,
   MagnifyingGlassIcon as MagnifyingGlassIconSolid,
-  BellIcon as BellIconSolid,
-  EnvelopeIcon as EnvelopeIconSolid,
-  ChatBubbleOvalLeftIcon as ChatBubbleOvalLeftIconSolid,
-  ArrowPathRoundedSquareIcon as ArrowPathRoundedSquareIconSolid,
-  HeartIcon as HeartIconSolid,
-  ShareIcon as ShareIconSolid,
-  CheckBadgeIcon as CheckBadgeIconSolid,
-  EllipsisHorizontalIcon as EllipsisHorizontalIconSolid,
-  PencilSquareIcon as PencilSquareIconSolid,
-  XCircleIcon as XCircleIconSolid,
   NoSymbolIcon as NoSymbolIconSolid,
-  BellSlashIcon as BellSlashIconSolid,
-  FlagIcon as FlagIconSolid,
+  PencilSquareIcon as PencilSquareIconSolid,
+  PlusCircleIcon as PlusCircleIconSolid,
+  ShareIcon as ShareIconSolid,
   TrashIcon as TrashIconSolid,
+  UserIcon as UserIconSolid,
+  XCircleIcon as XCircleIconSolid,
+  XMarkIcon as XIconSolid,
 } from "@heroicons/react/24/solid";
 
 export const icons = {
-  check: { outline: CheckIconOutline, solid: CheckIconSolid },
-  x: { outline: XIconOutline, solid: XIconSolid },
-  home: { outline: HomeIconOutline, solid: HomeIconSolid },
-  info: {
-    outline: InformationCircleIconOutline,
-    solid: InformationCircleIconSolid,
-  },
-  user: {
-    outline: UserIconOutline,
-    solid: UserIconSolid,
-  },
-  magnifyingGlass: {
-    outline: MagnifyingGlassIconOutline,
-    solid: MagnifyingGlassIconSolid,
+  arrowPathRoundedSquare: {
+    outline: ArrowPathRoundedSquareIconOutline,
+    solid: ArrowPathRoundedSquareIconSolid,
   },
   bell: {
     outline: BellIconOutline,
     solid: BellIconSolid,
   },
-  envelope: {
-    outline: EnvelopeIconOutline,
-    solid: EnvelopeIconSolid,
+  bellSlash: {
+    outline: BellSlashIconOutline,
+    solid: BellSlashIconSolid,
   },
   chatBubbleOvalLeft: {
     outline: ChatBubbleOvalLeftIconOutline,
     solid: ChatBubbleOvalLeftIconSolid,
   },
-  arrowPathRoundedSquare: {
-    outline: ArrowPathRoundedSquareIconOutline,
-    solid: ArrowPathRoundedSquareIconSolid,
-  },
-  heart: {
-    outline: HeartIconOutline,
-    solid: HeartIconSolid,
-  },
-  share: {
-    outline: ShareIconOutline,
-    solid: ShareIconSolid,
+  check: {
+    outline: CheckIconOutline,
+    solid: CheckIconSolid,
   },
   checkBadge: {
     outline: CheckBadgeIconOutline,
@@ -92,29 +78,65 @@ export const icons = {
     outline: EllipsisHorizontalIconOutline,
     solid: EllipsisHorizontalIconSolid,
   },
-  pencilSquare: {
-    outline: PencilSquareIconOutline,
-    solid: PencilSquareIconSolid,
-  },
-  xCircle: {
-    outline: XCircleIconOutline,
-    solid: XCircleIconSolid,
-  },
-  noSymbol: {
-    outline: NoSymbolIconOutline,
-    solid: NoSymbolIconSolid,
-  },
-  bellSlash: {
-    outline: BellSlashIconOutline,
-    solid: BellSlashIconSolid,
+  envelope: {
+    outline: EnvelopeIconOutline,
+    solid: EnvelopeIconSolid,
   },
   flag: {
     outline: FlagIconOutline,
     solid: FlagIconSolid,
   },
+  heart: {
+    outline: HeartIconOutline,
+    solid: HeartIconSolid,
+  },
+  home: {
+    outline: HomeIconOutline,
+    solid: HomeIconSolid,
+  },
+  info: {
+    outline: InformationCircleIconOutline,
+    solid: InformationCircleIconSolid,
+  },
+  lockClosed: {
+    outline: LockClosedIconOutline,
+    solid: LockClosedIconSolid,
+  },
+  magnifyingGlass: {
+    outline: MagnifyingGlassIconOutline,
+    solid: MagnifyingGlassIconSolid,
+  },
+  noSymbol: {
+    outline: NoSymbolIconOutline,
+    solid: NoSymbolIconSolid,
+  },
+  pencilSquare: {
+    outline: PencilSquareIconOutline,
+    solid: PencilSquareIconSolid,
+  },
+  plusCircle: {
+    outline: PlusCircleIconOutline,
+    solid: PlusCircleIconSolid,
+  },
+  share: {
+    outline: ShareIconOutline,
+    solid: ShareIconSolid,
+  },
   trash: {
     outline: TrashIconOutline,
     solid: TrashIconSolid,
+  },
+  user: {
+    outline: UserIconOutline,
+    solid: UserIconSolid,
+  },
+  x: {
+    outline: XIconOutline,
+    solid: XIconSolid,
+  },
+  xCircle: {
+    outline: XCircleIconOutline,
+    solid: XCircleIconSolid,
   },
 } as const;
 
