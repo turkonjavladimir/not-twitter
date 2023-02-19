@@ -3,7 +3,9 @@ import {
   ArrowPathRoundedSquareIcon as ArrowPathRoundedSquareIconOutline,
   BellIcon as BellIconOutline,
   BellSlashIcon as BellSlashIconOutline,
+  BookmarkIcon as BookmarkIconOutline,
   ChatBubbleOvalLeftIcon as ChatBubbleOvalLeftIconOutline,
+  ChatBubbleOvalLeftEllipsisIcon as ChatBubbleOvalLeftEllipsisIconOutline,
   CheckBadgeIcon as CheckBadgeIconOutline,
   CheckIcon as CheckIconOutline,
   EllipsisHorizontalIcon as EllipsisHorizontalIconOutline,
@@ -17,6 +19,7 @@ import {
   NoSymbolIcon as NoSymbolIconOutline,
   PencilSquareIcon as PencilSquareIconOutline,
   PlusCircleIcon as PlusCircleIconOutline,
+  QueueListIcon as QueueListIconOutline,
   ShareIcon as ShareIconOutline,
   TrashIcon as TrashIconOutline,
   UserIcon as UserIconOutline,
@@ -29,7 +32,9 @@ import {
   ArrowPathRoundedSquareIcon as ArrowPathRoundedSquareIconSolid,
   BellIcon as BellIconSolid,
   BellSlashIcon as BellSlashIconSolid,
+  BookmarkIcon as BookmarkIconSolid,
   ChatBubbleOvalLeftIcon as ChatBubbleOvalLeftIconSolid,
+  ChatBubbleOvalLeftEllipsisIcon as ChatBubbleOvalLeftEllipsisIconSolid,
   CheckBadgeIcon as CheckBadgeIconSolid,
   CheckIcon as CheckIconSolid,
   EllipsisHorizontalIcon as EllipsisHorizontalIconSolid,
@@ -43,6 +48,7 @@ import {
   NoSymbolIcon as NoSymbolIconSolid,
   PencilSquareIcon as PencilSquareIconSolid,
   PlusCircleIcon as PlusCircleIconSolid,
+  QueueListIcon as QueueListIconSolid,
   ShareIcon as ShareIconSolid,
   TrashIcon as TrashIconSolid,
   UserIcon as UserIconSolid,
@@ -64,9 +70,17 @@ export const icons = {
     outline: BellSlashIconOutline,
     solid: BellSlashIconSolid,
   },
+  bookmark: {
+    outline: BookmarkIconOutline,
+    solid: BookmarkIconSolid,
+  },
   chatBubbleOvalLeft: {
     outline: ChatBubbleOvalLeftIconOutline,
     solid: ChatBubbleOvalLeftIconSolid,
+  },
+  chatBubbleOvalLeftEllipsis: {
+    outline: ChatBubbleOvalLeftEllipsisIconOutline,
+    solid: ChatBubbleOvalLeftEllipsisIconSolid,
   },
   check: {
     outline: CheckIconOutline,
@@ -123,6 +137,10 @@ export const icons = {
   plusCircle: {
     outline: PlusCircleIconOutline,
     solid: PlusCircleIconSolid,
+  },
+  queueList: {
+    outline: QueueListIconOutline,
+    solid: QueueListIconSolid,
   },
   share: {
     outline: ShareIconOutline,

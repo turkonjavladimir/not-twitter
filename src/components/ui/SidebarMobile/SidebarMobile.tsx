@@ -1,37 +1,38 @@
 import Link from "next/link";
 import React, { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import {
-  UserIcon,
-  XMarkIcon,
-  BookmarkIcon,
-  QueueListIcon,
-  ChatBubbleOvalLeftEllipsisIcon,
-} from "@heroicons/react/24/outline";
 
 import { useUI } from "../context";
 
 import Settings from "./Settings";
 import AccountInfo from "./AccountInfo";
 
-const sideNavLinks = [
+import Icon from "../../common/Icon";
+import { IconName } from "../../common/Icon/Icon";
+
+interface SidNavLinkProps {
+  url: string;
+  label: string;
+  iconName: IconName;
+}
+const sideNavLinks: SidNavLinkProps[] = [
   {
-    icon: <UserIcon className="h-6 w-6" />,
+    iconName: "user",
     url: "/profile",
     label: "Profile",
   },
   {
-    icon: <ChatBubbleOvalLeftEllipsisIcon className="h-6 w-6" />,
+    iconName: "chatBubbleOvalLeftEllipsis",
     url: "/topics",
     label: "Topics",
   },
   {
-    icon: <BookmarkIcon className="h-6 w-6" />,
+    iconName: "bookmark",
     url: "/bookmarks",
     label: "Bookmarks",
   },
   {
-    icon: <QueueListIcon className="h-6 w-6" />,
+    iconName: "queueList",
     url: "/lists",
     label: "Lists",
   },
@@ -40,10 +41,10 @@ const sideNavLinks = [
 type NavItemProps = {
   label?: string;
   active?: boolean;
-  icon?: React.ReactNode;
+  iconName?: IconName;
 };
 
-const NavItem = ({ label, icon, active }: NavItemProps) => {
+const NavItem = ({ label, iconName, active }: NavItemProps) => {
   return (
     <span
       className={`${
@@ -51,7 +52,7 @@ const NavItem = ({ label, icon, active }: NavItemProps) => {
       } flex w-full items-center justify-start rounded-lg p-3 text-sm transition-colors hover:bg-gray-100 dark:hover:bg-neutral-700 lg:justify-start`}
     >
       <div className="flex min-w-0 items-center gap-4">
-        <div>{icon}</div>
+        {iconName && <Icon name={iconName} className="h-6 w-6" />}
         <span className="truncate text-lg">{label}</span>
       </div>
     </span>
@@ -63,7 +64,7 @@ const SidebarMobile = ({ displaySidebar }: { displaySidebar: boolean }) => {
   const sidebarNavItems = sideNavLinks?.map((item) => (
     <Link href={"/"} key={item?.url}>
       <NavItem
-        icon={item?.icon}
+        iconName={item?.iconName}
         label={item?.label}
         /*   active={active} */
       />
@@ -110,7 +111,7 @@ const SidebarMobile = ({ displaySidebar }: { displaySidebar: boolean }) => {
                     onClick={closeSidebar}
                   >
                     <span className="sr-only">Close sidebar</span>
-                    <XMarkIcon className="h-5 w-5" aria-hidden="true" />
+                    <Icon name="x" className="h-5 w-5" />
                   </button>
                 </div>
 
