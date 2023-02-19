@@ -1,14 +1,15 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
+
+import { useUI } from "../../ui/context";
+import { SidebarMobile } from "../../ui";
 
 import { BottomNavbar, Navabr, Sidebar } from "..";
-import { SidebarMobile } from "../../ui";
-import { useUI } from "../../ui/context";
 
 type LayoutProps = {
   children: ReactNode;
 };
 
-const Layout = ({ children }: LayoutProps): JSX.Element => {
+const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
   const { displaySidebar } = useUI();
 
   return (
