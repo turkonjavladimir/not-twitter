@@ -26,7 +26,7 @@ const CardActions = () => {
 
       <button
         aria-label="share tweet"
-        className="min-w-0 text-neutral-500 transition-colors hover:text-blue-500 "
+        className="text-neutral-500 transition-colors hover:text-blue-500 "
       >
         <Icon className="h-5 w-5 shrink-0" name="share" />
       </button>
