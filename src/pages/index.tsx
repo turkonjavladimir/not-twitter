@@ -5,12 +5,13 @@ import { signIn, signOut, useSession } from "next-auth/react";
 
 import { trpc } from "../utils/trpc";
 /* import { Card } from "../components/post"; */
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 
 const Card = lazy(() => import("../components/post/Card"));
 
 const Home: NextPage = () => {
   const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
+  const [currentTime, setCurrentTime] = useState("");
 
   return (
     <>
@@ -20,23 +21,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Suspense fallback={<h1>Still Loading…</h1>}>
-        <Card />
+      <Card />
 
-        <Card />
-        <Card />
-
-        <Card />
-        <Card />
-
-        <Card />
-        <Card />
-
-        <Card />
-        <Card />
-      </Suspense>
-
-      {/*  <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
@@ -72,19 +59,19 @@ const Home: NextPage = () => {
             <AuthShowcase />
           </div>
         </div>
-      </main> */}
+      </main>
     </>
   );
 };
 
 export default Home;
 
-/* const AuthShowcase: React.FC = () => {
+const AuthShowcase: React.FC = () => {
   const { data: sessionData } = useSession();
 
   const { data: secretMessage } = trpc.auth.getSecretMessage.useQuery(
     undefined, // no input
-    { enabled: sessionData?.user !== undefined },
+    { enabled: sessionData?.user !== undefined }
   );
 
   return (
@@ -102,4 +89,3 @@ export default Home;
     </div>
   );
 };
- */
