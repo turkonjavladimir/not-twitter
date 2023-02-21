@@ -5,13 +5,12 @@ import { signIn, signOut, useSession } from "next-auth/react";
 
 import { trpc } from "../utils/trpc";
 /* import { Card } from "../components/post"; */
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import { lazy, useState } from "react";
 
 const Card = lazy(() => import("../components/post/Card"));
 
 const Home: NextPage = () => {
   const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
-  const [currentTime, setCurrentTime] = useState("");
 
   return (
     <>
