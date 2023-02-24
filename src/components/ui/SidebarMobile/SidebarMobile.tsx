@@ -60,6 +60,7 @@ const NavItem = ({ label, iconName, active }: NavItemProps) => {
 };
 
 const SidebarMobile = ({ displaySidebar }: { displaySidebar: boolean }) => {
+  const { data: sessionData } = useSession();
   const { closeSidebar } = useUI();
   const sidebarNavItems = sideNavLinks?.map((item) => (
     <Link href={"/"} key={item?.url}>
@@ -122,6 +123,7 @@ const SidebarMobile = ({ displaySidebar }: { displaySidebar: boolean }) => {
                     avatarLabel="Name Surname"
                     followers={"10230"}
                     following={"112949999"}
+                    imageUrl={sessionData?.user?.image || ""}
                   />
 
                   <div className="h-auto flex-1 p-1">

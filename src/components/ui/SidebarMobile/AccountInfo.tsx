@@ -10,6 +10,7 @@ type AccountInfoProps = {
   followers: string;
   following: string;
   avatarLabel: string;
+  imageUrl?: string;
 };
 
 const AccountInfo = ({
@@ -18,12 +19,13 @@ const AccountInfo = ({
   avatarLabel,
   followers = "0",
   following = "0",
+  imageUrl,
 }: AccountInfoProps) => {
   return (
     <div className="p-4">
       <div className="flex w-full items-center justify-between">
         <div>
-          <Avatar size="md" label={avatarLabel} />
+          <Avatar size="md" label={avatarLabel} imageUrl={imageUrl} />
         </div>
         <Link href="/">
           <PlusCircleIcon className="h-8 w-8 text-neutral-400" />
