@@ -9,6 +9,7 @@ import AccountInfo from "./AccountInfo";
 
 import Icon from "../../common/Icon";
 import { IconName } from "../../common/Icon/Icon";
+import { useSession } from "next-auth/react";
 
 interface SidNavLinkProps {
   url: string;
