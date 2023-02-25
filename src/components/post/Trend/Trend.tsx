@@ -18,26 +18,24 @@ const TrendDropdownMenu = () => {
 
 type TrendProps = {
   text: string;
-  topic: string;
-  tweets: string;
+  topic?: string;
+  tweets?: string;
+  className?: string;
 };
 
-const Trend = ({ text, topic, tweets }: TrendProps) => {
-  if (!text) return null;
-
+const Trend = ({ text, topic, tweets, className }: TrendProps) => {
   return (
-    /* @TODO: convert div to link */
-    <div className="cursor-pointer transition-colors hover:bg-gray-100 hover:dark:bg-neutral-900">
-      <div className="flex flex-col py-3 px-4">
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-neutral-500">{topic}</span>
-          <TrendDropdownMenu />
-        </div>
-        <span className="font-bold">{text}</span>
-        <span className="text-sm text-neutral-500">
-          {formatNumber(tweets)} tweets
-        </span>
+    <div
+      className={`${className} cursor-pointer transition-colors hover:bg-gray-100 hover:dark:bg-neutral-900`}
+    >
+      <div className="flex items-center justify-between">
+        {topic && <span className="text-sm text-neutral-500">{topic}</span>}
+        <TrendDropdownMenu />
       </div>
+      <span className="block font-bold">{text}</span>
+      <span className="block text-sm text-neutral-500">
+        {tweets && formatNumber(tweets)} tweets
+      </span>
     </div>
   );
 };
